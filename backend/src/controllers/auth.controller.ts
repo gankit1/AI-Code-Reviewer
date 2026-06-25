@@ -44,7 +44,7 @@ export class AuthController {
         refreshToken: result.refreshToken,
       });
 
-      res.redirect(`${env.FRONTEND_URL}/auth/callback?${params.toString()}`);
+      res.redirect(`${env.FRONTEND_URL}/callback?${params.toString()}`);
     } catch (error) {
       next(error);
     }
