@@ -31,6 +31,7 @@ const envSchema = z.object({
   // OpenAI
   OPENAI_API_KEY: z.string().min(1),
   OPENAI_MODEL: z.string().default('gpt-4o'),
+  OPENAI_BASE_URL: z.string().url().optional(),
 
   // Anthropic (optional)
   ANTHROPIC_API_KEY: z.string().optional(),
